@@ -85,6 +85,18 @@ File| Description
 4. Run the notebook cells in order.
 5. Load the saved model using the provided model-loading code in the notebook.
 
+## Project Structure
+
+FGSM-Adversarial-Robustness/
+│
+├── FGSM_Adversarial_Robustness.ipynb
+├── fgsm_results.csv
+├── fgsm_cnn_model.pth
+├── accuracy_vs_epsilon.png
+├── asr_vs_epsilon.png
+├── requirements.txt
+└── README.md
+
 9. Conclusion
 
 This project demonstrates that a neural network with high accuracy on clean data can still be vulnerable to adversarial attacks. It highlights the importance of evaluating model robustness alongside traditional classification accuracy.
