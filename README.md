@@ -38,6 +38,13 @@ Epsilon| Accuracy
 0.20| 36.88%
 0.25| 20.13%
 0.30| 12.57%
+### Accuracy vs FGSM Epsilon
+
+![Accuracy Graph](accuracy_vs_epsilon.png)
+
+### Attack Success Rate vs FGSM Epsilon
+
+![ASR Graph](asr_vs_epsilon.png)
 
 Key Findings
 
