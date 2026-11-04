@@ -54,11 +54,13 @@ Key Findings
 - At epsilon 0.30, the attack success rate reached approximately 87.31%.
 
 Project Files
-
-- "FGSM_Adversarial_Robustness.ipynb" – Complete implementation.
-- "fgsm_results.csv" – Experimental results.
-- "accuracy_vs_epsilon.png" – Accuracy comparison graph.
-- "asr_vs_epsilon.png" – Attack success rate graph.
+## Project Files
+- `FGSM_Adversarial_Robustness.ipynb` – Complete project implementation.
+- `fgsm_results.csv` – Experimental results.
+- `accuracy_vs_epsilon.png` – Model accuracy graph.
+- `asr_vs_epsilon.png` – Attack success rate graph.
+- `fgsm_cnn_model.pth` – Trained CNN model weights.
+- `requirements.txt` – Required Python libraries.
 
 Conclusion
 
