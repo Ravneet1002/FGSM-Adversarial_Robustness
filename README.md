@@ -1,14 +1,14 @@
-# FGSM-Adversarial_Robustness
-Auditing Neural Network Robustness using FGSM Adversarial Attacks
 Auditing Neural Network Robustness via FGSM Adversarial Attacks
 
-Project Overview
+1. Project Overview
 
-This project investigates the robustness of a Convolutional Neural Network (CNN) against Fast Gradient Sign Method (FGSM) adversarial attacks.
+This project investigates the vulnerability of a Convolutional Neural Network (CNN) to adversarial attacks using the Fast Gradient Sign Method (FGSM).
 
-The model is trained on the MNIST handwritten digit dataset. FGSM attacks are then applied with different epsilon values to study how small input perturbations affect model performance.
+The CNN is trained on the MNIST handwritten digit dataset. FGSM is then used to generate adversarial images by introducing small perturbations to the original inputs.
 
-Technologies Used
+The objective is to evaluate how increasing attack strength affects the model's classification performance.
+
+2. Technologies Used
 
 - Python
 - PyTorch
@@ -18,53 +18,81 @@ Technologies Used
 - Matplotlib
 - Google Colab
 
-Dataset
+3. Dataset
 
-MNIST Handwritten Digit Dataset:
+MNIST Handwritten Digit Dataset
 
-- 60,000 training images
-- 10,000 testing images
-- 10 digit classes (0–9)
+- Training images: 60,000
+- Testing images: 10,000
+- Image dimensions: 28 × 28 pixels
+- Classes: 10 (digits 0–9)
 
-Experimental Results
+4. Methodology
+
+1. Load and preprocess the MNIST dataset.
+2. Build a Convolutional Neural Network.
+3. Train the CNN using the training dataset.
+4. Evaluate its accuracy on clean test images.
+5. Implement FGSM adversarial attacks.
+6. Generate adversarial images using different epsilon values.
+7. Evaluate accuracy and Attack Success Rate (ASR).
+8. Visualize and analyze the experimental results.
+
+5. Experimental Results
 
 The CNN achieved 99.02% accuracy on clean test images.
 
-Epsilon| Accuracy
-0.00| 99.02%
-0.05| 95.56%
-0.10| 84.50%
-0.15| 63.08%
-0.20| 36.88%
-0.25| 20.13%
-0.30| 12.57%
-### Accuracy vs FGSM Epsilon
+Epsilon| Accuracy (%)| ASR (%)
+0.00| 99.02| 0.00
+0.05| 95.56| 3.49
+0.10| 84.50| 14.66
+0.15| 63.08| 36.30
+0.20| 36.88| 62.75
+0.25| 20.13| 79.67
+0.30| 12.57| 87.31
 
-![Accuracy Graph](accuracy_vs_epsilon.png)
+Accuracy vs FGSM Epsilon
 
-### Attack Success Rate vs FGSM Epsilon
+"Accuracy Graph" (accuracy_vs_epsilon.png)
 
-![ASR Graph](asr_vs_epsilon.png)
+Attack Success Rate vs FGSM Epsilon
 
-Key Findings
+"ASR Graph" (asr_vs_epsilon.png)
 
-- The model achieved high accuracy on clean images.
-- Increasing epsilon reduced classification accuracy.
-- FGSM attacks became more successful as perturbation strength increased.
-- At epsilon 0.30, the attack success rate reached approximately 87.31%.
+6. Key Findings
 
-Project Files
-## Project Files
-- `FGSM_Adversarial_Robustness.ipynb` – Complete project implementation.
-- `fgsm_results.csv` – Experimental results.
-- `accuracy_vs_epsilon.png` – Model accuracy graph.
-- `asr_vs_epsilon.png` – Attack success rate graph.
-- `fgsm_cnn_model.pth` – Trained CNN model weights.
-- `requirements.txt` – Required Python libraries.
+- The CNN achieved high accuracy on clean MNIST test images.
+- Model accuracy decreased as epsilon increased.
+- The FGSM attack became more successful with stronger perturbations.
+- At epsilon = 0.30, the Attack Success Rate reached approximately 87.31%.
 
-Conclusion
+7. Project Files
 
-This experiment demonstrates that even a highly accurate neural network can be vulnerable to adversarial perturbations. It highlights the importance of evaluating and improving the robustness of deep learning models.
+File| Description
+"FGSM_Adversarial_Robustness.ipynb"| Complete implementation
+"fgsm_results.csv"| Experimental results
+"fgsm_cnn_model.pth"| Trained CNN weights
+"accuracy_vs_epsilon.png"| Accuracy graph
+"asr_vs_epsilon.png"| ASR graph
+"requirements.txt"| Required libraries
+
+8. How to Run the Project
+
+1. Clone this repository.
+2. Install the required libraries using "pip install -r requirements.txt".
+3. Open the Jupyter Notebook in Google Colab or Jupyter.
+4. Run the notebook cells in order.
+
+9. Conclusion
+
+This project demonstrates that a neural network with high accuracy on clean data can still be vulnerable to adversarial attacks. It highlights the importance of evaluating model robustness alongside traditional classification accuracy.
+
+10. Future Improvements
+
+- Explore additional adversarial attack methods.
+- Experiment with adversarial training.
+- Compare different neural network architectures.
+- Investigate robustness under different perturbation budgets.
 
 ---
 
