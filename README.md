@@ -75,6 +75,7 @@ File| Description
 "accuracy_vs_epsilon.png"| Accuracy graph
 "asr_vs_epsilon.png"| ASR graph
 "requirements.txt"| Required libraries
+- The trained CNN model can be loaded using PyTorch without repeating the training process.
 
 8. How to Run the Project
 
@@ -82,6 +83,7 @@ File| Description
 2. Install the required libraries using "pip install -r requirements.txt".
 3. Open the Jupyter Notebook in Google Colab or Jupyter.
 4. Run the notebook cells in order.
+5. Load the saved model using the provided model-loading code in the notebook.
 
 9. Conclusion
 
