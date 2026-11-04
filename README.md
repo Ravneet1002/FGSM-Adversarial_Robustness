@@ -51,13 +51,13 @@ Epsilon| Accuracy (%)| ASR (%)
 0.25| 20.13| 79.67
 0.30| 12.57| 87.31
 
-Accuracy vs FGSM Epsilon
+### Accuracy vs FGSM Epsilon
 
-"Accuracy Graph" (accuracy_vs_epsilon.png)
+![Accuracy Graph](./accuracy_vs_epsilon.png)
 
-Attack Success Rate vs FGSM Epsilon
+### Attack Success Rate vs FGSM Epsilon
 
-"ASR Graph" (asr_vs_epsilon.png)
+![ASR Graph](./asr_vs_epsilon.png)
 
 6. Key Findings
 
